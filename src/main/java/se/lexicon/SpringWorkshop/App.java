@@ -18,6 +18,11 @@ public class App {
         UserInputService userInputService =context. getBean (UserInputService.class) ;
         StudentManagement smanage = context.getBean(StudentManagement.class);
         Student st = smanage.create();
-        System.out.println(st.toString());
+        Student st2 = smanage.create();
+        Student st3 = smanage.create();
+        studentDao.findAll().forEach(System.out::println);
+        studentDao.delete(2);
+        studentDao.findAll().forEach(System.out::println);
+
     }
 }

@@ -36,6 +36,12 @@ public class StudentDaoListImpl implements StudentDao {
 
     @Override
     public void delete(int id) {
-
+        List<Student> newStudents = new ArrayList<>(students.size()-1);
+        for(Student st : students ){
+            if(st.getId()!=id){
+                newStudents.add(st);
+            }
+        }
+        students = newStudents;
     }
 }
