@@ -7,7 +7,7 @@ public class Student {
 
     public Student(String name) {
         this.name = name;
-        this.id = nr++;
+        this.id = ++nr;
     }
 
 
