@@ -3,7 +3,7 @@ package se.lexicon.SpringWorkshop.models;
 public class Student {
     private int id;
     private String name;
-    private static int nr;
+    private static int nr = 0;
 
     public Student(String name) {
         this.name = name;
