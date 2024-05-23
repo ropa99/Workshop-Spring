@@ -1,12 +1,13 @@
-package se.lexicon.SpringWorkshop.data_access;
+package se.lexicon.SpringWorkshop.service;
 
 import java.util.List;
 import se.lexicon.SpringWorkshop.models.Student;
 
-public interface StudentDao {
-
+public interface StudentManagement {
+    Student create();
     Student save(Student student);
     Student find(int id);
+    Student remove(int id);
     List<Student> findAll();
-    void delete (int id);
+    Student edit(Student student);
 }
